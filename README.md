@@ -44,3 +44,28 @@ head(mtcars_metric)
 
 The purpose of this package is to demonstrate that a package dataset can
 be published and consumed using pins and pkgdown.
+
+``` r
+# devtools::install_github("rstudio/pins-r")
+library("pins") 
+
+board <- board_url("https://ijlyttle.github.io/pkgpins/pins-board/")
+
+board |> pin_list()
+#> [1] "mtcars_metric"
+
+board |> pin_versions("mtcars_metric")
+#> # A tibble: 1 × 3
+#>   version                created             hash 
+#>   <chr>                  <dttm>              <chr>
+#> 1 20221225T005922Z-8416c 2022-12-24 18:59:22 8416c
+
+board |> pin_read("mtcars_metric") |> head()
+#>                    mpg cyl disp  hp drat    wt  qsec vs am gear carb lper100km
+#> Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   11.2007
+#> Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   11.2007
+#> Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   10.3164
+#> Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   10.9914
+#> Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   12.5783
+#> Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   12.9953
+```

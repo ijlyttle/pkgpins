@@ -25,7 +25,7 @@ A data frame with 32 observations on 12 (numeric) variables.
 }
 }
 \source{
-\url{https://www.who.int/teams/global-tuberculosis-programme/data}
+\url{https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html}
 }
 \usage{
 mtcars_metric

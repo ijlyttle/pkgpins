@@ -44,4 +44,15 @@ head(mtcars_metric)
 
 The purpose of this package is to demonstrate that a package dataset can be published and consumed using pins and pkgdown.
 
+```{r consume}
+# devtools::install_github("rstudio/pins-r")
+library("pins") 
 
+board <- board_url("https://ijlyttle.github.io/pkgpins/pins-board/")
+
+board |> pin_list()
+
+board |> pin_versions("mtcars_metric")
+
+board |> pin_read("mtcars_metric") |> head()
+```
