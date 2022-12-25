@@ -1,0 +1,9 @@
+file: mtcars_metric.json
+file_size: 4775
+pin_hash: 8416c64d7f274df3
+type: json
+title: 'mtcars_metric: a pinned 32 x 12 data frame'
+description: ~
+tags: ~
+created: 20221225T005922Z
+api_version: 1.0
